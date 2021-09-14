@@ -5,6 +5,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+EXE/
 
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta

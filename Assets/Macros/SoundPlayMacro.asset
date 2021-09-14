@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1893448595, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: SoundPlayMacro
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"input","label":"input","summary":null,"hideLabel":false}],"controlOutputDefinitions":[{"key":"output","label":"output","summary":null,"hideLabel":false}],"valueInputDefinitions":[{"hasDefaultValue":false,"defaultValue":{"$content":0.0,"$type":"System.Single"},"_type":"System.Single","key":"Duration","label":"Duration","summary":null,"hideLabel":false},{"hasDefaultValue":false,"defaultValue":null,"_type":"UnityEngine.AudioClip","key":"AudioSource","label":"AudioSource","summary":null,"hideLabel":false}],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-166.2835,"y":-1.721878},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":-595.0,"y":-94.0},"guid":"9ee97dfc-f66d-4697-af50-ad1b3ec1a658","$version":"A","$type":"Bolt.GraphInput","$id":"13"},{"defaultValues":{},"position":{"x":-32.0,"y":-206.0},"guid":"a34fb549-9304-4e8b-b1ad-1dce9acc88ab","$version":"A","$type":"Bolt.GraphOutput","$id":"15"},{"defaultValues":{"duration":{"$content":1.0,"$type":"System.Single"},"unscaledTime":{"$content":false,"$type":"System.Boolean"}},"position":{"x":-365.0,"y":-205.0},"guid":"f4a67a54-af4a-424f-a313-6b94384e2ece","$version":"A","$type":"Bolt.Timer","$id":"17"},{"chainable":false,"member":{"name":"PlayOneShot","parameterTypes":["UnityEngine.AudioClip"],"targetType":"UnityEngine.AudioSource","targetTypeName":"UnityEngine.AudioSource","$version":"A"},"defaultValues":{"target":null,"%clip":null},"position":{"x":-108.0,"y":15.0},"guid":"9abb1360-4c54-49bb-88d5-9bedfacff32e","$version":"A","$type":"Bolt.InvokeMember","$id":"19"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"AudioSource","$type":"System.String"},"object":null},"position":{"x":-349.0,"y":21.0},"guid":"cc0c5a30-5c88-40ea-8766-b2d5f5704697","$version":"A","$type":"Bolt.GetVariable","$id":"22"},{"sourceUnit":{"$ref":"17"},"sourceKey":"started","destinationUnit":{"$ref":"15"},"destinationKey":"output","guid":"d4895e63-4190-4c5f-b535-0e073e1a14a3","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"input","destinationUnit":{"$ref":"17"},"destinationKey":"toggle","guid":"b9529f5b-3aeb-4d08-bb75-19a59bc4cfce","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"completed","destinationUnit":{"$ref":"19"},"destinationKey":"enter","guid":"70450f51-720e-44de-9744-4ee87c126954","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"Duration","destinationUnit":{"$ref":"17"},"destinationKey":"duration","guid":"16148928-99d1-4408-90ee-5e4c098bbb29","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"AudioSource","destinationUnit":{"$ref":"19"},"destinationKey":"%clip","guid":"bb611be1-1c8f-4651-bb3b-25510cb0f5e6","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"22"},"sourceKey":"value","destinationUnit":{"$ref":"19"},"destinationKey":"target","guid":"4e809231-7fcd-426d-af39-035f7983cee4","$type":"Bolt.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []
