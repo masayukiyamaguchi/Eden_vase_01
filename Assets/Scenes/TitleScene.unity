@@ -154,6 +154,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 986856487}
+  - {fileID: 555805969}
   - {fileID: 2128448754}
   - {fileID: 1595359003}
   m_Father: {fileID: 1931030601}
@@ -598,7 +599,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartButtonClick
+          m_StringArgument: SingleButtonClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &89262093
@@ -889,6 +890,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &555805968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555805969}
+  - component: {fileID: 555805971}
+  - component: {fileID: 555805970}
+  m_Layer: 5
+  m_Name: ErrorMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &555805969
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555805968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 51854092}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 327.5, y: 2.3}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &555805970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555805968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4ed6cee0dddf3084f91f1f06f0246331, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Room\u304C\u5B58\u5728\u3057\u307E\u305B\u3093"
+--- !u!222 &555805971
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555805968}
+  m_CullTransparentMesh: 1
 --- !u!1 &572099453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,10 +1223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"FirstButtonGroup","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SecondButtonGroup","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"FirstButtonGroup","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SecondButtonGroup","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PhotonSystem","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1815015223}
     - {fileID: 1931030600}
+    - {fileID: 1949618530}
 --- !u!114 &666177792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,10 +1671,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"InputFieldTextObject","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PhotonSystem","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"InputFieldTextObject","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PhotonSystem","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"ErrorMessage","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1595359002}
     - {fileID: 1949618530}
+    - {fileID: 555805968}
 --- !u!114 &1084281360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2156,7 +2238,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51854092}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2275,10 +2357,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"FirstButtonGroup","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SecondButtonGroup","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"FirstButtonGroup","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"SecondButtonGroup","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PhotonSystem","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1815015223}
     - {fileID: 1931030600}
+    - {fileID: 1949618530}
 --- !u!114 &1668802631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2760,6 +2843,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomRoomName: 
+  IsRoomIn: 0
+  SoloPlay: 0
+  inRoomPlayerCount: 0
+  RoomMaxPlayers: 0
 --- !u!4 &1949618532
 Transform:
   m_ObjectHideFlags: 0
@@ -2902,7 +2989,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartButtonClick
+          m_StringArgument: CreateRoomButtonClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1982577928
@@ -2973,7 +3060,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51854092}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
