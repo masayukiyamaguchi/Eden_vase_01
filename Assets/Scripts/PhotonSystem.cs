@@ -5,10 +5,65 @@ using Photon.Pun;
 using Photon.Realtime;
 using System;
 using System.Linq;
+using Ludiq;
+using Bolt;
+using UnityEngine.UI;
 
 
 public class PhotonSystem : MonoBehaviourPunCallbacks
 {
+    private static PhotonSystem instance;
+
+
+    public static PhotonSystem Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                Type t = typeof(PhotonSystem);
+
+                instance = (PhotonSystem)FindObjectOfType(t);
+                if (instance == null)
+                {
+                    Debug.LogError(t + " をアタッチしているGameObjectはありません");
+                }
+            }
+
+            return instance;
+        }
+    }
+
+    void Awake()
+    {
+        // 他のゲームオブジェクトにアタッチされているか調べる
+        // アタッチされている場合は破棄する。
+        CheckInstance();
+    }
+
+    protected bool CheckInstance()
+    {
+        if (instance == null)
+        {
+            instance = this as PhotonSystem;
+
+            //シーンが切り替わってもオブジェクトを壊さない
+            DontDestroyOnLoad(gameObject);
+
+            Application.targetFrameRate = 60;
+
+
+            return true;
+        }
+        else if (Instance == this)
+        {
+            return true;
+        }
+        Destroy(this);
+        return false;
+    }
+
+
     //部屋名
     public string randomRoomName;
 
@@ -18,11 +73,8 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
     public int inRoomPlayerCount;
     public int RoomMaxPlayers;
 
-    //シーン切り替えで破壊されないようにする
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    public int PlayerCount;
+
 
     private void Start()
     {
@@ -34,6 +86,8 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
     {
         // PhotonServerSettingsの設定内容を使ってマスターサーバーへ接続する
         PhotonNetwork.ConnectUsingSettings();
+
+
     }
 
 
@@ -42,8 +96,6 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
         // PhotonServerSettingsの設定内容を使ってマスターサーバーへ接続する
         PhotonNetwork.Disconnect();
     }
-
-
 
 
     // ルームを生成
@@ -58,14 +110,18 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
         roomOptions.MaxPlayers = 8;
 
         // ルームに参加する（ルームが存在しなければ作成して参加する）
-        PhotonNetwork.JoinOrCreateRoom(randomRoomName, roomOptions, TypedLobby.Default);
+        //PhotonNetwork.JoinOrCreateRoom(randomRoomName, roomOptions, TypedLobby.Default);
+
+        //デバック用にroomに入るようにする
+        PhotonNetwork.JoinOrCreateRoom("room", roomOptions, TypedLobby.Default);
 
     }
 
     // マスターサーバーへの接続が成功した時に呼ばれるコールバック
     public override void OnConnectedToMaster()
     {
-
+        //初期ネームが決定
+        PhotonNetwork.LocalPlayer.NickName = "Player" + PhotonNetwork.LocalPlayer.ActorNumber;
     }
 
 
@@ -75,18 +131,6 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
         return randomRoomName;
     }
 
-    //ルームの最大参加人数を返す
-    public string RoomMaxPlayersFunc()
-    {
-        //Debug.Log(RoomInfo.MaxPlayers());　このように書いてみたがだめだった。
-        return null;
-    }
-
-    //ルームの現在の参加人数を返す
-    public string RoomPlayerCountFunc()
-    {
-        return null;
-    }
 
     //部屋から退出
     public void LeaveRoomFunc() 
@@ -100,7 +144,9 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
     public void JointIdentyRoom(string roomName)
     {
 
-        PhotonNetwork.JoinRoom(roomName);
+        //デバック用にroomに入るようにする
+        //PhotonNetwork.JoinRoom(roomName);
+        PhotonNetwork.JoinRoom("room");
     }
 
 
@@ -111,9 +157,51 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
     // ルームへの参加が成功した時に呼ばれるコールバック
     public override void OnJoinedRoom()
     {
-        Debug.Log("ルームへ参加しました");
+        Debug.Log(PhotonNetwork.LocalPlayer.NickName + "がルームへ参加しました");
         Debug.Log(randomRoomName);
+
         IsRoomIn = true;
+    }
+
+
+    public void RoomStateIndicate()
+    {
+        //部屋の人数を把握
+        PlayerCount = PhotonNetwork.CurrentRoom.PlayerCount;
+        //オブジェクトに描写
+        GameObject.Find("PlayerCount").GetComponent<Text>().text = PlayerCount + "/" + PhotonNetwork.CurrentRoom.MaxPlayers;
+
+        //プレイヤー名表示
+        GameObject.Find("PlayerList").GetComponent<Text>().text = "";
+        foreach (Player onePlayer in PhotonNetwork.PlayerList)
+        {
+            GameObject.Find("PlayerList").GetComponent<Text>().text += onePlayer.NickName + "\n";
+        }
+
+        //プレイヤーの数だけレディー表示をする
+        for (int i = 0; i < PlayerCount; i++)
+        {
+            GameObject.Find("PlayerList").transform.GetChild(i).gameObject.SetActive(true);
+        }
+    }
+
+    public void InRoomPlayerCount() 
+    {
+        RoomStateIndicate();
+    }
+
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Debug.Log(newPlayer.NickName + "が部屋に入りました");
+        RoomStateIndicate();
+    }
+
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        Debug.Log(otherPlayer.NickName + "が部屋から出ました");
+        RoomStateIndicate();
     }
 
     // ルーム名を指定したルームへの参加が失敗した時に呼ばれるコールバック
@@ -141,6 +229,8 @@ public class PhotonSystem : MonoBehaviourPunCallbacks
         return playerGameobject;
 
     }
+
+
 
 
 

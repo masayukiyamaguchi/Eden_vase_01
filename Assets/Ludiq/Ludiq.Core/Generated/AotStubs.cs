@@ -29,6 +29,10 @@ namespace Ludiq.Generated.Aot
 	// Bolt.StateMacro.op_Equality
 	// Bolt.StateMacro.op_Implicit
 	// Bolt.StateMacro.op_Inequality
+	// ButtonClickGameStart.ButtonClickGameStartFunc
+	// ButtonClickGameStart.op_Equality
+	// ButtonClickGameStart.op_Implicit
+	// ButtonClickGameStart.op_Inequality
 	// CameraMove.op_Equality
 	// CameraMove.op_Implicit
 	// CameraMove.op_Inequality
@@ -66,6 +70,9 @@ namespace Ludiq.Generated.Aot
 	// CFX_LightIntensityFade.op_Equality
 	// CFX_LightIntensityFade.op_Implicit
 	// CFX_LightIntensityFade.op_Inequality
+	// ChangeNickName.op_Equality
+	// ChangeNickName.op_Implicit
+	// ChangeNickName.op_Inequality
 	// Cinemachine.Cinemachine3rdPersonAim.op_Equality
 	// Cinemachine.Cinemachine3rdPersonAim.op_Implicit
 	// Cinemachine.Cinemachine3rdPersonAim.op_Inequality
@@ -236,6 +243,13 @@ namespace Ludiq.Generated.Aot
 	// float.op_Inequality
 	// float.op_LessThan
 	// float.op_LessThanOrEqual
+	// GameStartButtonClick.op_Equality
+	// GameStartButtonClick.op_Implicit
+	// GameStartButtonClick.op_Inequality
+	// GameSystem.GameObjectSecActive
+	// GameSystem.op_Equality
+	// GameSystem.op_Implicit
+	// GameSystem.op_Inequality
 	// int.ToString
 	// Ludiq.AotList..ctor
 	// Ludiq.AotList.Add
@@ -285,10 +299,26 @@ namespace Ludiq.Generated.Aot
 	// Photon.Realtime.SupportLogger.op_Equality
 	// Photon.Realtime.SupportLogger.op_Implicit
 	// Photon.Realtime.SupportLogger.op_Inequality
+	// PhotonSystem.ActivePlayerSporn
+	// PhotonSystem.ConnectMasterServer
+	// PhotonSystem.CreateRoom
+	// PhotonSystem.InRoomPlayerCount
+	// PhotonSystem.IsRoomIn
+	// PhotonSystem.JointIdentyRoom
+	// PhotonSystem.LeaveRoomFunc
 	// PhotonSystem.op_Equality
 	// PhotonSystem.op_Implicit
 	// PhotonSystem.op_Inequality
-	// PhotonSystem.Photon_IsMine
+	// PhotonSystem.randomRoomName
+	// PhotonSystem.ReaveMasterServer
+	// PhotonSystem.SoloPlay
+	// PlayerPhotonScript.op_Equality
+	// PlayerPhotonScript.op_Implicit
+	// PlayerPhotonScript.op_Inequality
+	// PlayerPhotonScript.Photon_IsMine
+	// ReadyCheckButton.op_Equality
+	// ReadyCheckButton.op_Implicit
+	// ReadyCheckButton.op_Inequality
 	// string.op_Equality
 	// string.op_Inequality
 	// System.Collections.Generic.List<string>..ctor
@@ -558,8 +588,10 @@ namespace Ludiq.Generated.Aot
 	// UnityEngine.FrictionJoint2D.op_Implicit
 	// UnityEngine.FrictionJoint2D.op_Inequality
 	// UnityEngine.GameObject..ctor
+	// UnityEngine.GameObject..ctor
 	// UnityEngine.GameObject.activeSelf
 	// UnityEngine.GameObject.Destroy
+	// UnityEngine.GameObject.Find
 	// UnityEngine.GameObject.FindGameObjectsWithTag
 	// UnityEngine.GameObject.GetComponent
 	// UnityEngine.GameObject.Instantiate
@@ -710,6 +742,7 @@ namespace Ludiq.Generated.Aot
 	// UnityEngine.QualitySettings.op_Equality
 	// UnityEngine.QualitySettings.op_Implicit
 	// UnityEngine.QualitySettings.op_Inequality
+	// UnityEngine.Quaternion..ctor
 	// UnityEngine.Quaternion.AngleAxis
 	// UnityEngine.Quaternion.Euler
 	// UnityEngine.Quaternion.eulerAngles
@@ -717,6 +750,7 @@ namespace Ludiq.Generated.Aot
 	// UnityEngine.Quaternion.op_Inequality
 	// UnityEngine.Quaternion.op_Multiply
 	// UnityEngine.Quaternion.op_Multiply
+	// UnityEngine.Random.Range
 	// UnityEngine.Random.Range
 	// UnityEngine.RaycastHit2D.op_Implicit
 	// UnityEngine.Rect.op_Equality
@@ -1245,6 +1279,52 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// ButtonClickGameStart.ButtonClickGameStartFunc
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ButtonClickGameStart_ButtonClickGameStartFunc()
+		{
+			global::ButtonClickGameStart target = default(global::ButtonClickGameStart);
+			target.ButtonClickGameStartFunc();
+			global::Ludiq.InstanceActionInvoker<ButtonClickGameStart> optimized = new global::Ludiq.InstanceActionInvoker<ButtonClickGameStart>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::ButtonClickGameStart));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ButtonClickGameStart.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ButtonClickGameStart_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ButtonClickGameStart.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ButtonClickGameStart_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ButtonClickGameStart.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ButtonClickGameStart_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// CameraMove.op_Equality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CameraMove_op_Equality()
@@ -1667,6 +1747,41 @@ namespace Ludiq.Generated.Aot
 		// CFX_LightIntensityFade.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void CFX_LightIntensityFade_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ChangeNickName.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ChangeNickName_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ChangeNickName.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ChangeNickName_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ChangeNickName.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ChangeNickName_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -3662,6 +3777,88 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// GameStartButtonClick.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameStartButtonClick_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameStartButtonClick.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameStartButtonClick_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameStartButtonClick.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameStartButtonClick_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameSystem.GameObjectSecActive
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameSystem_GameObjectSecActive()
+		{
+			global::GameSystem target = default(global::GameSystem);
+			string arg0 = default(string);
+			target.GameObjectSecActive(arg0);
+			global::Ludiq.InstanceActionInvoker<GameSystem, string> optimized = new global::Ludiq.InstanceActionInvoker<GameSystem, string>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::GameSystem), arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameSystem.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameSystem_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameSystem.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameSystem_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// GameSystem.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void GameSystem_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
 		// int.ToString
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void int_ToString()
@@ -4227,6 +4424,86 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// PhotonSystem.ActivePlayerSporn
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_ActivePlayerSporn()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			string arg0 = default(string);
+			target.ActivePlayerSporn(arg0);
+			global::Ludiq.InstanceFunctionInvoker<PhotonSystem, string, UnityEngine.GameObject> optimized = new global::Ludiq.InstanceFunctionInvoker<PhotonSystem, string, UnityEngine.GameObject>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem), arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.ConnectMasterServer
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_ConnectMasterServer()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			target.ConnectMasterServer();
+			global::Ludiq.InstanceActionInvoker<PhotonSystem> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.CreateRoom
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_CreateRoom()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			target.CreateRoom();
+			global::Ludiq.InstanceActionInvoker<PhotonSystem> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.InRoomPlayerCount
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_InRoomPlayerCount()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			target.InRoomPlayerCount();
+			global::Ludiq.InstanceActionInvoker<PhotonSystem> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.IsRoomIn
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_IsRoomIn()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			bool accessor = target.IsRoomIn;
+			target.IsRoomIn = default(bool);
+			global::Ludiq.InstanceFieldAccessor<PhotonSystem, bool> optimized = new global::Ludiq.InstanceFieldAccessor<PhotonSystem, bool>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PhotonSystem));
+			optimized.SetValue(default(global::PhotonSystem), default(bool));
+		}
+		
+		// PhotonSystem.JointIdentyRoom
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_JointIdentyRoom()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			string arg0 = default(string);
+			target.JointIdentyRoom(arg0);
+			global::Ludiq.InstanceActionInvoker<PhotonSystem, string> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem, string>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem), arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.LeaveRoomFunc
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_LeaveRoomFunc()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			target.LeaveRoomFunc();
+			global::Ludiq.InstanceActionInvoker<PhotonSystem> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem));
+			optimized.Invoke(default(object[]));
+		}
+		
 		// PhotonSystem.op_Equality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void PhotonSystem_op_Equality()
@@ -4253,6 +4530,122 @@ namespace Ludiq.Generated.Aot
 		// PhotonSystem.op_Inequality
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void PhotonSystem_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.randomRoomName
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_randomRoomName()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			string accessor = target.randomRoomName;
+			target.randomRoomName = default(string);
+			global::Ludiq.InstanceFieldAccessor<PhotonSystem, string> optimized = new global::Ludiq.InstanceFieldAccessor<PhotonSystem, string>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PhotonSystem));
+			optimized.SetValue(default(global::PhotonSystem), default(string));
+		}
+		
+		// PhotonSystem.ReaveMasterServer
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_ReaveMasterServer()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			target.ReaveMasterServer();
+			global::Ludiq.InstanceActionInvoker<PhotonSystem> optimized = new global::Ludiq.InstanceActionInvoker<PhotonSystem>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PhotonSystem));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PhotonSystem.SoloPlay
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PhotonSystem_SoloPlay()
+		{
+			global::PhotonSystem target = default(global::PhotonSystem);
+			bool accessor = target.SoloPlay;
+			target.SoloPlay = default(bool);
+			global::Ludiq.InstanceFieldAccessor<PhotonSystem, bool> optimized = new global::Ludiq.InstanceFieldAccessor<PhotonSystem, bool>(default(global::System.Reflection.FieldInfo));
+			optimized.GetValue(default(global::PhotonSystem));
+			optimized.SetValue(default(global::PhotonSystem), default(bool));
+		}
+		
+		// PlayerPhotonScript.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerPhotonScript_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PlayerPhotonScript.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerPhotonScript_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PlayerPhotonScript.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerPhotonScript_op_Inequality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 != arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// PlayerPhotonScript.Photon_IsMine
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void PlayerPhotonScript_Photon_IsMine()
+		{
+			global::PlayerPhotonScript target = default(global::PlayerPhotonScript);
+			target.Photon_IsMine();
+			global::Ludiq.InstanceFunctionInvoker<PlayerPhotonScript, bool> optimized = new global::Ludiq.InstanceFunctionInvoker<PlayerPhotonScript, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(default(global::PlayerPhotonScript));
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ReadyCheckButton.op_Equality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ReadyCheckButton_op_Equality()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
+			bool @operator = (arg0 == arg1);
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ReadyCheckButton.op_Implicit
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ReadyCheckButton_op_Implicit()
+		{
+			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
+			bool conversion = ((bool)(arg0));
+			global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool> optimized = new global::Ludiq.StaticFunctionInvoker<UnityEngine.Object, bool>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// ReadyCheckButton.op_Inequality
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void ReadyCheckButton_op_Inequality()
 		{
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object arg1 = default(global::UnityEngine.Object);
@@ -7381,6 +7774,14 @@ namespace Ludiq.Generated.Aot
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_GameObject_ctor()
 		{
+			string arg0 = default(string);
+			new UnityEngine.GameObject(arg0);
+		}
+		
+		// UnityEngine.GameObject..ctor
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_GameObject_ctor_0()
+		{
 			new UnityEngine.GameObject();
 		}
 		
@@ -7401,6 +7802,17 @@ namespace Ludiq.Generated.Aot
 			global::UnityEngine.Object arg0 = default(global::UnityEngine.Object);
 			global::UnityEngine.Object.Destroy(arg0);
 			global::Ludiq.StaticActionInvoker<UnityEngine.Object> optimized = new global::Ludiq.StaticActionInvoker<UnityEngine.Object>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// UnityEngine.GameObject.Find
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_GameObject_Find()
+		{
+			string arg0 = default(string);
+			global::UnityEngine.GameObject.Find(arg0);
+			global::Ludiq.StaticFunctionInvoker<string, UnityEngine.GameObject> optimized = new global::Ludiq.StaticFunctionInvoker<string, UnityEngine.GameObject>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0);
 			optimized.Invoke(default(object[]));
 		}
@@ -9150,6 +9562,17 @@ namespace Ludiq.Generated.Aot
 			optimized.Invoke(default(object[]));
 		}
 		
+		// UnityEngine.Quaternion..ctor
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Quaternion_ctor()
+		{
+			float arg0 = default(float);
+			float arg1 = default(float);
+			float arg2 = default(float);
+			float arg3 = default(float);
+			new UnityEngine.Quaternion(arg0, arg1, arg2, arg3);
+		}
+		
 		// UnityEngine.Quaternion.AngleAxis
 		[global::UnityEngine.Scripting.PreserveAttribute()]
 		public static void UnityEngine_Quaternion_AngleAxis()
@@ -9243,6 +9666,18 @@ namespace Ludiq.Generated.Aot
 			int arg1 = default(int);
 			global::UnityEngine.Random.Range(arg0, arg1);
 			global::Ludiq.StaticFunctionInvoker<int, int, int> optimized = new global::Ludiq.StaticFunctionInvoker<int, int, int>(default(global::System.Reflection.MethodInfo));
+			optimized.Invoke(null, arg0, arg1);
+			optimized.Invoke(default(object[]));
+		}
+		
+		// UnityEngine.Random.Range
+		[global::UnityEngine.Scripting.PreserveAttribute()]
+		public static void UnityEngine_Random_Range_0()
+		{
+			float arg0 = default(float);
+			float arg1 = default(float);
+			global::UnityEngine.Random.Range(arg0, arg1);
+			global::Ludiq.StaticFunctionInvoker<float, float, float> optimized = new global::Ludiq.StaticFunctionInvoker<float, float, float>(default(global::System.Reflection.MethodInfo));
 			optimized.Invoke(null, arg0, arg1);
 			optimized.Invoke(default(object[]));
 		}
