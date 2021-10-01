@@ -43,6 +43,9 @@ MonoBehaviour:
   - LoadScene
   - RpcReadyCheckCancel
   - RPCGameObjectSecActive
+  - RPCAllStart
+  - RPCTileSystemLineIn
+  - RPCTileFall
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

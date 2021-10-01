@@ -18,9 +18,9 @@ public class ButtonClickGameStart : MonoBehaviourPunCallbacks
 
 
     [PunRPC]
-    private void LoadScene() 
+    public void LoadScene() 
     {
-         CustomEvent.Trigger(this.gameObject, "ButtonClick");
+        CustomEvent.Trigger(this.gameObject, "ButtonClick");
     }
 
 }
