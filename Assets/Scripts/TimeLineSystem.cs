@@ -29,7 +29,18 @@ public class TimeLineSystem : MonoBehaviourPunCallbacks
 
     public void AllStart()
     {
-        photonView.RPC(nameof(RPCAllStart), RpcTarget.AllViaServer);
+        //ソロプレイかどうかの判断
+        bool IsSoloPlay = GameObject.Find("PhotonSystem").gameObject.GetComponent<PhotonSystem>().SoloPlay;
+
+        if (!IsSoloPlay)
+        {
+            //マルチならrpc操作
+            photonView.RPC(nameof(RPCAllStart), RpcTarget.AllViaServer);
+        }
+        else
+        {
+            CustomEvent.Trigger(this.gameObject, "AllStart");
+        }        
     }
 
     [PunRPC]
@@ -37,5 +48,30 @@ public class TimeLineSystem : MonoBehaviourPunCallbacks
     {
         CustomEvent.Trigger(this.gameObject, "AllStart");
     }
+
+
+    public void TimeLineSet(string RPCName) 
+    {
+
+        //ソロプレイかどうかの判断
+        bool IsSoloPlay = GameObject.Find("PhotonSystem").gameObject.GetComponent<PhotonSystem>().SoloPlay;
+
+        if (!IsSoloPlay)
+        {
+            //マルチならrpc操作
+            photonView.RPC("RPCTimeLineSet", RpcTarget.AllViaServer, RPCName);
+        }
+        else
+        {
+            CustomEvent.Trigger(this.gameObject, RPCName);
+        }        
+    }
+
+    [PunRPC]
+    public void RPCTimeLineSet(string RPCName)
+    {
+        CustomEvent.Trigger(this.gameObject,RPCName);
+    }
+
 
 }

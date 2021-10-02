@@ -813,7 +813,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401391299}
-  m_LocalRotation: {x: -0.09838409, y: 0.9004393, z: -0.27437705, w: -0.3228729}
+  m_LocalRotation: {x: -0.09838408, y: 0.9004393, z: -0.27437705, w: -0.32287294}
   m_LocalPosition: {x: 0.64200985, y: 2.7158122, z: 2.5239635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1793,7 +1793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1393704681
 Transform:
   m_ObjectHideFlags: 0
@@ -1995,6 +1995,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11c80c8985647743b32a8f412d6f425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomRoomName: 
+  IsRoomIn: 0
+  SoloPlay: 0
+  inRoomPlayerCount: 0
+  RoomMaxPlayers: 0
+  PlayerCount: 0
 --- !u!4 &1687855908
 Transform:
   m_ObjectHideFlags: 0
@@ -2735,11 +2741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675052700261889952, guid: bb5648543a35ae444b492f23c0dedaf4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3274289
+      value: -0.327429
       objectReference: {fileID: 0}
     - target: {fileID: 4675052700261889952, guid: bb5648543a35ae444b492f23c0dedaf4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08195499
+      value: -0.081955016
       objectReference: {fileID: 0}
     - target: {fileID: 4675052700261889952, guid: bb5648543a35ae444b492f23c0dedaf4, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2747,7 +2753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675052700261889952, guid: bb5648543a35ae444b492f23c0dedaf4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.228559
+      value: -0.22855902
       objectReference: {fileID: 0}
     - target: {fileID: 4675052701016967577, guid: bb5648543a35ae444b492f23c0dedaf4, type: 3}
       propertyPath: m_LocalPosition.x
